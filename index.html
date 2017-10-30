@@ -10,13 +10,56 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
+<style>
+	
+	#countingCrystals {
+		width: 900px;
+		margin:auto;
+	}
+
+	#crystal-1 {
+		padding: 20px;
+	}
+
+	#crystal-2 {
+		padding: 20px;
+	}
+	
+	#crystal-3 {
+		padding: 20px;
+	}	
+	#crystal-4 {
+		padding: 20px;
+	
+
+</style>
+
 </head>
 <body>
 	<div class="container-fluid">
-		<div id="row">
-			<div class="col-xs-6 col-md-4" id="stats"></div>
-  			<div class="col-xs-6 col-md-4" id="main-crystal"></div>
-  			<div class="col-xs-6 col-md-4" id="sum"></div>
+		<!-- Title of game -->
+		<div class="row" id="title"><h1>The Crystal Math-od!</h1></div>
+
+		<!-- Wins/losses, crytsal's number, addition -->
+		<div class="row" id="mainSection">
+			<div class="col-xs-6 col-md-4" id="stats">STATS HERE</div>
+  			<div class="col-xs-6 col-md-4" id="main-crystal"> MAIN HERE</div>
+  			<div class="col-xs-6 col-md-4" id="sum"> SUM HERE</div>
+		</div>
+
+		<div class="row" id="countingCrystals">
+			<div class="col-xs-6 col-md-3" id="button crystal-1">
+				<img src="assets/images/crystal_1.png">
+			</div>
+  			<div class="col-xs-6 col-md-3" id="button crystal-2">
+  				<img src="assets/images/crystal_2.png">
+			</div>
+  			<div class="col-xs-6 col-md-3" id="button crystal-3">
+  				<img src="assets/images/crystal_3.png">
+  			</div>
+  			<div class="col-xs-6 col-md-3" id="butto crystal-4">
+  				<img src="assets/images/crystal_4.png">
+  			</div>
 		</div>
 
 </body>
