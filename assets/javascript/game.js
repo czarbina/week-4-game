@@ -4,7 +4,6 @@ var wins = 0;
 var losses = 0;
 var sum = 0
 
-
 var crystalRandom = Math.floor(Math.random() * (120 - 19)) + 19;  
 console.log(crystalRandom);
 
@@ -18,15 +17,34 @@ var crystalThree = Math.floor(Math.random() * (10 - 7)) + 7;
 console.log(crystalThree);
 
 var crystalFour = Math.floor(Math.random() * (13 - 10)) + 10;
-console.log(crystalFour);  
+console.log(crystalFour); 
+
+var addToSum = function(x)
+	{ sum=x+sum;
+		$("#sum").html(sum);
+		if (sum===crystalRandom){
+			console.log("You win!");
+			wins++;
+			reset();
+			$("#sum").text(sum=0);
+		}
+		else if (sum>crystalRandom){
+			console.log("You lose!");
+			losses++;
+			reset();
+			$("#sum").text(sum=0);
+	}
+} 
 
 function reset() {
 	crystalRandom = Math.floor(Math.random() * (120 - 19)) + 19;  
 console.log(crystalRandom);
-$("#main-crystal").html(crystalRandom);
+	$("#main-crystal").html(crystalRandom);
+	$("#wins").html("<span id='wins'>" + wins + "</span>");
+	$("#losses").html(("<span id='losses'>" + losses + "</span>"));
 	crystalOne = Math.floor(Math.random() * (4 - 1)) + 1;
 console.log(crystalOne);
-crystalTwo = Math.floor(Math.random() * (7 - 4)) + 4;  
+	crystalTwo = Math.floor(Math.random() * (7 - 4)) + 4;  
 console.log(crystalTwo);
 	crystalThree = Math.floor(Math.random() * (10 - 7)) + 7;
 console.log(crystalThree);
@@ -37,7 +55,6 @@ console.log(crystalFour);
 
 $(document).ready(function() {
 	$("#main-crystal").html(crystalRandom);
-
 
 	$("#rockOne").on("click", function(event){
 		addToSum(crystalOne);
@@ -56,19 +73,6 @@ $(document).ready(function() {
 		console.log(sum);
 	 });
 
-	var addToSum = function(x)
-	{ sum=x+sum;
-		if (sum===crystalRandom){
-			console.log("You win!");
-			wins++;
-			reset();
-		}
-		else if (sum>crystalRandom){
-			console.log("You lose!");
-			losses++;
-			reset();
-	}
-}
 })
 
 
