@@ -25,12 +25,14 @@ var addToSum = function(x)
 		if (sum===crystalRandom){
 			console.log("You win!");
 			wins++;
+			$("#winz").text("Wins: " + wins)
 			reset();
 			$("#sum").text(sum=0);
 		}
 		else if (sum>crystalRandom){
 			console.log("You lose!");
 			losses++;
+			$("#lossez").text("Losses: " + losses)
 			reset();
 			$("#sum").text(sum=0);
 	}
@@ -40,8 +42,6 @@ function reset() {
 	crystalRandom = Math.floor(Math.random() * (120 - 19)) + 19;  
 console.log(crystalRandom);
 	$("#main-crystal").html(crystalRandom);
-	$("#wins").html("<span id='wins'>" + wins + "</span>");
-	$("#losses").html(("<span id='losses'>" + losses + "</span>"));
 	crystalOne = Math.floor(Math.random() * (4 - 1)) + 1;
 console.log(crystalOne);
 	crystalTwo = Math.floor(Math.random() * (7 - 4)) + 4;  
@@ -74,7 +74,3 @@ $(document).ready(function() {
 	 });
 
 })
-
-
-
-
