@@ -6,7 +6,7 @@
 	<title>The Crystal Math-od!</title>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Kranky" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Archivo+Black|Fredericka+the+Great|Kranky" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script type="text/javascript" src=assets/javascript/game.js></script>
 
@@ -14,7 +14,7 @@
 <style>
 	
 	#title {
-		font-family: 'Fredericka the Great', 'Kranky', "Times New Roman";
+		font-family: 'Fredericka the Great', "Times New Roman";
 		text-align: center;
 		font-size: 65px;
 	}	
@@ -36,8 +36,28 @@
 		margin-left: 50px;
 
 	}
+
+	#main-crystal {
+		font-family: 'Archivo Black', "Times New Roman"; 
+		font-size: 120px;
+		padding-top:40px;
+	}
+
+	#stats {
+		text-align: left;
+		font-size: 30px;
+		padding-left: 35px;
+    	padding-top: 60px;
+	}
+
+	#winnies {
+		margin-bottom: 25px;
+	}
 		
-	
+	button {
+		border: solid 1px black;
+	}
+
 	#countingCrystals {
 		width: 900px;
 		margin:auto;
@@ -69,8 +89,11 @@
 
 		<!-- Wins/losses, crytsal's number, addition -->
 		<div class="row" id="mainSection">
-			<div class="col-md-4" id="stats">STATS HERE</div>
-  			<div class="col-md-4" id="main-crystal"> MAIN HERE</div>
+			<div class="col-md-4" id="stats">
+				<p id="winnies">Wins:</p>
+				<p id="lossies">Losses:</p>
+			</div>
+  			<div class="col-md-4" id="main-crystal"></div>
   			<div class="col-md-4" id="sum">SUM</div>
 		</div>
 
