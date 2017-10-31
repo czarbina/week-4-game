@@ -23,15 +23,15 @@ var addToSum = function(x)
 	{ sum=x+sum;
 		$("#sum").html(sum);
 		if (sum===crystalRandom){
-			console.log("You win!");
 			wins++;
+			console.log(wins);
 			$("#winz").text("Wins: " + wins)
 			reset();
 			$("#sum").text(sum=0);
 		}
 		else if (sum>crystalRandom){
-			console.log("You lose!");
 			losses++;
+			console.log(losses);
 			$("#lossez").text("Losses: " + losses)
 			reset();
 			$("#sum").text(sum=0);
